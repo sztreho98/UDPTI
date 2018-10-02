@@ -1,0 +1,48 @@
+#include "std_lib_facilities.h"
+
+int main()
+{
+	string myname;
+	string firstname;
+	string friendname;
+	char sex;
+	int age=0;
+	int nextage=0;
+	
+	cout << "Your name:" << '\n';
+	cin>> myname;
+
+	cout << "Friend1 name:" << '\n';
+ 	cin>> firstname;
+ 	
+	cout << "Friend2 name:" << '\n';
+	cin >> friendname;
+	
+	cout << "Friend2 gender [m/f]:" << '\n';
+	cin >> sex;
+	
+	cout << "Friend1 age:" << '\n';
+	cin >> age;
+	
+	cout << "Hello," << firstname << "!" << '\n';
+	cout << "How are you? I am fine. I miss you." << '\n';
+	if (sex == 'm')
+		cout << "If you see " + friendname + " please ask him to call me." << '\n';
+	else
+		cout << "If you see " + friendname + " please ask her to call me." << '\n';
+	
+	if (age < 12)
+nextage = age+1;
+		cout << "Next year you will be " << nextage << "!" << '\n';
+		
+	if (age == 17)
+		cout << "Next year you will be able to vote." << '\n';
+		
+	if (age > 70)
+		cout << "I hope you are enjoying retirement." << '\n';
+cout << "Your sincerely," <<'\n';
+cout << '\n';
+cout << '\n';
+cout << myname << '\n';
+
+}

@@ -1,0 +1,71 @@
+#include "std_lib_facilities.h"
+
+int main () 
+{
+    double value;
+    double sum=0.0;
+    string unit;
+    vector<double> v;
+
+    while(unit!="|"){
+	
+	if(cin.fail()) { 
+		break;
+	}
+	cout << "Type a number and a unit (cm,m,in,ft)!" << '\n';
+        cin >> value >> unit;
+
+        if (unit == "m")
+
+            value = value;
+
+        else if (unit == "cm")
+
+            value = value / 100;
+
+        else if (unit == "in")
+
+            value = value * 0.3048;
+
+        else if (unit == "ft")
+
+            value = value * 0.254;
+	
+        v.push_back ( value );
+        sum += value ;
+
+    }
+
+    double min=0;
+    
+    for(int i=1; i<v.size();++i)
+    {
+        if(v[i]<v[min])
+        {
+            min=i;
+        }
+    }
+
+    double max=0;
+
+    for(int i=1; i<v.size();++i)
+    {
+        if(v[i]>v[max])
+        {
+            max=i;
+        }
+    }
+
+    sort(v);
+
+    cout << "Values: ";
+
+    for (int i = 0; i < v.size(); ++i)
+        cout << v[i] << "m, ";
+    cout << "\n";
+    cout << "Sum: " << sum << " m" << '\n';
+    cout << "Smallest value: " << v[max] <<" m" << '\n';
+    cout << "Largest value: " << v[min] << " m" << '\n';
+    
+    return 0;
+}

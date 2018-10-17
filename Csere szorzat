@@ -1,0 +1,20 @@
+
+#include <stdlib.h>
+#include <string>
+#include <iostream>
+
+
+using namespace std;
+
+int main()
+{
+
+	int a = 9;
+	int b = 3;
+	cout<<"Before : "<< a << " "<< b << endl;
+	a = a * b;
+	b = a / b;
+	a = a / b;
+
+	cout <<"After : "<< a << " " << b << endl;
+} 
